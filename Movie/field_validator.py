@@ -22,6 +22,7 @@ class Movie(BaseModel):
     language:Optional[str] = None
     reviews:List[Review]
 
+#custom validation logic for fields
     @field_validator('genres')
     @classmethod
     def lower_value(cls,value):
